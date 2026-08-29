@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Browse the Search2Get fashion collection with search, category filters, sorting, wishlist and quick view.">
+  <meta name="description" content="Browse the Search2Get collection with instant search, category filters, sorting, wishlist, quick view and a persistent shopping bag.">
+  <meta property="og:title" content="Shop — Search2Get">
+  <meta property="og:description" content="Discover curated everyday essentials with fast search, filters, quick view and saved favourites.">
+  <meta property="og:type" content="website">
   <title>Shop — Search2Get</title>
   <link rel="icon" href="i1.png">
   <link rel="stylesheet" href="index.css">
@@ -13,8 +16,8 @@
   <main id="main">
     <section class="page-hero">
       <div class="container page-hero-grid reveal">
-        <div><span class="section-kicker">Collection 2026</span><h1>Find your<br><span style="color:var(--brand)">everyday.</span></h1><p>Search the full demo collection, filter by fit direction and sort by price or rating. Wishlist and bag state persist across pages.</p></div>
-        <span class="page-chip">8 styles · frontend demo</span>
+        <div><span class="section-kicker">The collection</span><h1>Find your<br><span style="color:var(--brand)">everyday.</span></h1><p>Explore a focused edit of easy staples and expressive essentials. Search instantly, narrow by collection, sort your way and save the pieces you want to come back to.</p></div>
+        <span class="page-chip">8 curated styles · from ₹599</span>
       </div>
     </section>
     <section class="section-sm" style="padding-top:20px">
@@ -24,7 +27,7 @@
           <div class="filter-group" role="group" aria-label="Filter collection"><button class="filter-chip active" data-filter="All" type="button">All</button><button class="filter-chip" data-filter="Women" type="button">Women</button><button class="filter-chip" data-filter="Men" type="button">Men</button></div>
           <label><span class="skip-link">Sort products</span><select class="select" id="sortProducts"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="rating">Top rated</option></select></label>
         </div>
-        <div class="catalog-summary" id="catalogSummary"></div>
+        <div class="catalog-summary" id="catalogSummary" aria-live="polite"></div>
         <div class="product-grid" id="catalogGrid"></div>
       </div>
     </section>
