@@ -50,9 +50,10 @@
   }
 
   function upgradeImage(img) {
-    if (!(img instanceof HTMLImageElement) || img.dataset.s2gHq === 'true') return;
+    if (!(img instanceof HTMLImageElement) || img.dataset.s2gHq === 'true' || img.dataset.s2gHq === 'fallback') return;
 
-    const original = legacyName(img.getAttribute('src') || '');
+    const fallbackSrc = img.getAttribute('src') || '';
+    const original = legacyName(fallbackSrc);
     const base = photos[original];
     if (!base) return;
 
@@ -60,6 +61,15 @@
     img.decoding = 'async';
     img.referrerPolicy = 'no-referrer';
     img.style.objectPosition = positions[original] || '50% 50%';
+
+    img.addEventListener('error', () => {
+      if (img.dataset.s2gHq !== 'true') return;
+      img.dataset.s2gHq = 'fallback';
+      img.removeAttribute('srcset');
+      img.removeAttribute('sizes');
+      img.src = fallbackSrc;
+    }, { once: true });
+
     img.src = makeUrl(base, 1400);
     img.srcset = [
       `${makeUrl(base, 640, 84)} 640w`,
