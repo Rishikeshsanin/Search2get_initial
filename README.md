@@ -1,101 +1,129 @@
-# Search2Get ✦ Fashion Discovery Storefront
+<p align="center">
+  <img src="./assets/readme-banner.svg" alt="Search2Get — Less searching. More finding." width="100%" />
+</p>
 
-Search2Get is a **responsive fashion discovery storefront** rebuilt from my first-year frontend project.
+<p align="center">
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-handwritten-11100E?style=flat-square&logo=html5&logoColor=white" />
+  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-responsive-11100E?style=flat-square&logo=css3&logoColor=white" />
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-vanilla-D95F35?style=flat-square&logo=javascript&logoColor=white" />
+  <img alt="LocalStorage" src="https://img.shields.io/badge/state-localStorage-6D675F?style=flat-square" />
+  <img alt="Accessibility" src="https://img.shields.io/badge/accessibility-keyboard%20aware-6D675F?style=flat-square" />
+  <img alt="License" src="https://img.shields.io/badge/code-MIT-11100E?style=flat-square" />
+</p>
 
-The original version was written completely by hand in plain HTML, CSS and JavaScript. Instead of replacing those foundations with a framework, this rebuild deliberately keeps the vanilla web stack and shows how far the same fundamentals can be pushed with stronger design systems, state management, accessibility, responsiveness and interaction design.
+<p align="center">
+  <strong>Search2Get</strong> is my first-year frontend project rebuilt into a polished, editorial fashion-discovery storefront — while deliberately keeping the same vanilla HTML, CSS and JavaScript foundation.
+</p>
 
-> **Project evolution:** first-year frontend experiment → polished portfolio-grade storefront.
+---
 
-## ✨ Experience
+## The project in one sentence
 
-Search2Get is designed around one idea: **less searching, more finding**.
+**A visible before → after story of frontend growth.**
 
-The current version includes:
+The original 2023 version was written completely by hand as a first-year project. Instead of deleting that history or hiding it behind a framework, the current version keeps the original stack and pushes it much further with stronger product thinking, responsive systems, state, accessibility, interaction design and a completely new visual direction.
 
-- Product-first responsive homepage
-- Searchable product catalog
-- Men / Women collection filters
-- Price and rating sorting
-- Product quick-view modal
-- Size selection before adding to bag
-- Persistent shopping bag
-- Quantity controls and calculated totals
-- Persistent wishlist
-- Complete demo checkout flow with validation
-- Light / dark theme support
-- Responsive mobile navigation
-- Fashion journal / editorial page
-- Review publishing demo
-- Contact form interaction
-- Newsletter interaction
-- Local demo account / session flow
-- Toast feedback and micro-interactions
-- Scroll reveal with reduced-motion support
-- Keyboard-friendly modals and drawers
-- Semantic HTML and visible focus states
-- SEO-oriented titles, descriptions and social metadata
-- Custom 404 experience
+> **2023:** static first-year storefront  
+> **2026:** responsive, stateful, editorial shopping experience
 
-## 🛍️ Main flows to try
+## Visual direction
 
-1. Open **Shop** and search for a style.
-2. Filter between **Men** and **Women**.
-3. Sort by price or rating.
-4. Open **Quick view**, select a size and add the item to your bag.
-5. Add favourites to the wishlist.
-6. Change bag quantities and refresh the page — state persists.
-7. Complete the **demo checkout** and view the confirmation state.
-8. Toggle light / dark mode and refresh.
-9. Publish a local review.
-10. Try the contact, newsletter and demo-account interactions.
+The V3 refresh replaces the old low-resolution imagery with responsive high-resolution editorial photography and a warmer, fashion-led art direction.
 
-## 🧠 Why vanilla HTML, CSS and JavaScript?
+<table>
+  <tr>
+    <td width="33%"><img src="https://images.unsplash.com/photo-1627808170609-d65b9b4029ba?auto=format&fit=crop&w=900&q=86" alt="Search2Get women edit" /></td>
+    <td width="33%"><img src="https://images.unsplash.com/photo-1630245680530-4f02f2cdf6b6?auto=format&fit=crop&w=900&q=86" alt="Search2Get men edit" /></td>
+    <td width="33%"><img src="https://images.unsplash.com/photo-1764698072685-f01c10bd2dca?auto=format&fit=crop&w=900&q=86" alt="Search2Get editorial edit" /></td>
+  </tr>
+</table>
 
-This project started with those technologies, so the rebuild keeps them intentionally.
+The storefront requests multiple image widths (`640 / 960 / 1400 / 2000px`) with `srcset`, so the visual upgrade stays sharp without blindly serving desktop-size media to every device.
 
-The goal is to demonstrate growth in the fundamentals rather than hide an early project behind a framework or template:
+> Photography sources and licensing are documented in [`IMAGE_CREDITS.md`](./IMAGE_CREDITS.md).
 
-- reusable interface patterns
-- responsive layout systems
-- DOM-driven rendering
-- client-side state management
+## What actually works
+
+| Experience | Implementation |
+| --- | --- |
+| Product discovery | Instant search, Men/Women filters and price/rating sorting |
+| Product detail | Quick-view modal, size selection and product metadata |
+| Shopping bag | Add/remove, quantity controls, totals and persistent state |
+| Wishlist | Persistent favourites across page refreshes |
+| Checkout | Multi-field validated checkout simulation + confirmation state |
+| Theme | Light/dark mode persisted locally |
+| Reviews | Publish a local review and render it immediately |
+| Contact | Validated local-only contact interaction |
+| Newsletter | Browser-local subscription interaction |
+| Member space | Local session flow with validation and password visibility |
+| Navigation | Responsive desktop/mobile navigation |
+| Accessibility | Semantic structure, focus states, keyboard-aware overlays and reduced-motion support |
+| Error handling | Custom 404 page + legacy-route compatibility redirects |
+
+## Why the project stays vanilla
+
+This is intentional.
+
+Rebuilding the app in React would make it a different project. Keeping HTML, CSS and JavaScript makes the progression more meaningful because the improvement comes from **better fundamentals**, not from replacing the foundation.
+
+The current build demonstrates:
+
+- responsive layout systems instead of fixed-pixel composition
+- DOM-driven reusable product rendering
+- client-side state modelling
 - Web Storage persistence
+- search / filter / sort logic
+- modal and drawer lifecycle handling
+- form validation and feedback states
 - accessible interaction patterns
-- form validation
-- product filtering and sorting
-- modal / drawer behaviour
-- progressive enhancement
-- visual hierarchy and motion design
+- responsive image delivery
+- visual hierarchy, motion and editorial art direction
 
-## 🧰 Tech stack
+## Architecture
 
-| Area | Technology |
+```mermaid
+flowchart LR
+  A[Product data] --> B[Reusable product renderer]
+  B --> C[Home featured grid]
+  B --> D[Shop catalog]
+  D --> E[Search / filter / sort]
+  B --> F[Quick view]
+  F --> G[Bag state]
+  B --> H[Wishlist state]
+  G --> I[(localStorage)]
+  H --> I
+  I --> J[Persistent browser experience]
+  K[Forms / reviews / session] --> I
+```
+
+## V3 design system
+
+The modern storefront is layered rather than destructive:
+
+- `index.css` contains the rebuilt core UI system
+- `v3.css` adds the premium editorial art direction
+- `index.js` owns the product/state/interaction logic
+- `visual-refresh.js` upgrades legacy image references to responsive high-resolution sources
+
+That separation keeps the project history understandable while making the latest experience significantly sharper.
+
+## Pages
+
+| Route | Purpose |
 | --- | --- |
-| Structure | HTML5 |
-| Styling | CSS3 |
-| Logic | Vanilla JavaScript (ES6+) |
-| State | Web Storage API (`localStorage`) |
-| Formatting | `Intl.NumberFormat` |
-| Deployment | Static-host friendly / Vercel-ready |
-| Build tooling | None required |
-
-## 📁 Key pages
-
-| Page | Purpose |
-| --- | --- |
-| `index.html` | Product-first landing page |
-| `shop.html` | Search, filters, sorting and product discovery |
-| `journal.html` | Editorial / project storytelling |
-| `reviews.html` | Reviews and local publishing demo |
-| `contact.html` | Contact interaction |
-| `account.html` | Local demo account/session experience |
+| `index.html` | Editorial landing page + featured products |
+| `shop.html` | Search, filter, sort and catalog browsing |
+| `journal.html` | Fashion editorial + project build story |
+| `reviews.html` | Review showcase + local publishing |
+| `contact.html` | Contact interaction + project FAQ |
+| `account.html` | Local member/session experience |
 | `404.html` | Custom not-found page |
 
-Legacy first-year routes are retained as lightweight compatibility redirects so old links do not simply break.
+Legacy first-year routes remain as lightweight compatibility redirects so old links do not simply break.
 
-## 🚀 Run locally
+## Run locally
 
-No install or build step is required.
+No package installation or build step is required.
 
 ```bash
 python -m http.server 8000
@@ -107,23 +135,30 @@ Then open:
 http://localhost:8000
 ```
 
-You can also open `index.html` directly in a browser for most flows.
+## Privacy / demo boundary
 
-## 🔒 Demo / privacy note
+Search2Get is a frontend portfolio project, not a production ecommerce service.
 
-Search2Get is a **frontend portfolio project**, not a production ecommerce service.
+- no real payment is processed
+- no server-side account is created
+- credentials are not sent to a backend
+- cart, wishlist, reviews, contact entries, newsletter entries and local-session state are browser-local
 
-- No real payment is processed.
-- No server-side account is created.
-- No credentials are transmitted to a backend.
-- Cart, wishlist, reviews, newsletter entries and demo-session state are stored locally in the browser.
+## Repository history matters
 
-## 🕰️ Project history
+The earliest commits are intentionally still here.
 
-The repository history preserves the original 2023 first-year project, including the hand-written early implementation. That history is intentional: the value of this repository is not only the finished interface, but the visible progression from an early frontend build to a much more complete product experience.
+They show the original first-year implementation before the redesign, which makes this repository more useful than a clean-room rewrite: it documents how the same developer and the same core technologies evolved from a beginner build into a substantially stronger frontend product.
 
-## 👨‍💻 Author
+## Credits & license
 
-Designed and built by **Rishikesh Munnaluri**.
+Project code is available under the [MIT License](./LICENSE).
 
-The original project and the modern rebuild both use hand-written HTML, CSS and JavaScript.
+Editorial photography is **not** covered by the project MIT license. See [`IMAGE_CREDITS.md`](./IMAGE_CREDITS.md) for photographers, source pages and Unsplash licensing information.
+
+---
+
+<p align="center">
+  Designed and built by <strong>Rishikesh Munnaluri</strong><br/>
+  <sub>Original first-year build + modern rebuild — handwritten HTML, CSS and JavaScript.</sub>
+</p>
