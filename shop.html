@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse the Search2Get fashion collection with search, category filters, sorting, wishlist and quick view.">
+  <title>Shop — Search2Get</title>
+  <link rel="icon" href="i1.png">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a><div id="site-header"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero-grid reveal">
+        <div><span class="section-kicker">Collection 2026</span><h1>Find your<br><span style="color:var(--brand)">everyday.</span></h1><p>Search the full demo collection, filter by fit direction and sort by price or rating. Wishlist and bag state persist across pages.</p></div>
+        <span class="page-chip">8 styles · frontend demo</span>
+      </div>
+    </section>
+    <section class="section-sm" style="padding-top:20px">
+      <div class="container">
+        <div class="catalog-toolbar reveal" aria-label="Product controls">
+          <label class="search-field" for="productSearch"><span aria-hidden="true" style="position:absolute;left:14px;top:50%;transform:translateY(-50%)">⌕</span><input id="productSearch" type="search" placeholder="Search styles, collections…" autocomplete="off"></label>
+          <div class="filter-group" role="group" aria-label="Filter collection"><button class="filter-chip active" data-filter="All" type="button">All</button><button class="filter-chip" data-filter="Women" type="button">Women</button><button class="filter-chip" data-filter="Men" type="button">Men</button></div>
+          <label><span class="skip-link">Sort products</span><select class="select" id="sortProducts"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="rating">Top rated</option></select></label>
+        </div>
+        <div class="catalog-summary" id="catalogSummary"></div>
+        <div class="product-grid" id="catalogGrid"></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div><script src="index.js"></script>
+</body>
+</html>
