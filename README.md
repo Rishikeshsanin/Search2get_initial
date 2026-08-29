@@ -1,64 +1,129 @@
-# Search2Get ✦ Frontend Glow-Up
+# Search2Get ✦ Fashion Discovery Storefront
 
-Search2Get started as my **first-year frontend project**, written by hand in plain HTML, CSS and JavaScript. The original 2023 version is still preserved in this repository's Git history.
+Search2Get is a **responsive fashion discovery storefront** rebuilt from my first-year frontend project.
 
-This rebuild keeps the same vanilla-web foundation but upgrades the project into a polished, responsive fashion discovery storefront with a complete frontend interaction flow.
+The original version was written completely by hand in plain HTML, CSS and JavaScript. Instead of replacing those foundations with a framework, this rebuild deliberately keeps the vanilla web stack and shows how far the same fundamentals can be pushed with stronger design systems, state management, accessibility, responsiveness and interaction design.
 
-## What the new version includes
+> **Project evolution:** first-year frontend experiment → polished portfolio-grade storefront.
 
-- Responsive homepage, catalog, journal, reviews, contact and demo-account pages
-- Searchable product catalog with Men/Women filters and sorting
-- Product quick-view modal with size selection
-- Persistent shopping bag with quantity controls and totals
+## ✨ Experience
+
+Search2Get is designed around one idea: **less searching, more finding**.
+
+The current version includes:
+
+- Product-first responsive homepage
+- Searchable product catalog
+- Men / Women collection filters
+- Price and rating sorting
+- Product quick-view modal
+- Size selection before adding to bag
+- Persistent shopping bag
+- Quantity controls and calculated totals
 - Persistent wishlist
-- Fully interactive **demo checkout** with validation and order confirmation
-- Light/dark theme toggle
-- Mobile navigation
-- Scroll-reveal and micro-interactions with reduced-motion support
-- Local review publishing demo
-- Local contact/newsletter demos
-- Local demo account/session flow
-- Keyboard-friendly modal/drawer escape handling
-- Semantic HTML, focus states and clearer accessibility labels
-- SEO-friendly page titles and descriptions
+- Complete demo checkout flow with validation
+- Light / dark theme support
+- Responsive mobile navigation
+- Fashion journal / editorial page
+- Review publishing demo
+- Contact form interaction
+- Newsletter interaction
+- Local demo account / session flow
+- Toast feedback and micro-interactions
+- Scroll reveal with reduced-motion support
+- Keyboard-friendly modals and drawers
+- Semantic HTML and visible focus states
+- SEO-oriented titles, descriptions and social metadata
+- Custom 404 experience
 
-> **Important:** This is a frontend portfolio project, not a real ecommerce service. No payment is processed, no account is created on a server, and form/cart state is stored only in the browser using `localStorage`.
+## 🛍️ Main flows to try
 
-## Tech stack
+1. Open **Shop** and search for a style.
+2. Filter between **Men** and **Women**.
+3. Sort by price or rating.
+4. Open **Quick view**, select a size and add the item to your bag.
+5. Add favourites to the wishlist.
+6. Change bag quantities and refresh the page — state persists.
+7. Complete the **demo checkout** and view the confirmation state.
+8. Toggle light / dark mode and refresh.
+9. Publish a local review.
+10. Try the contact, newsletter and demo-account interactions.
 
-- HTML5
-- CSS3
-- Vanilla JavaScript (ES6+)
-- Web Storage API (`localStorage`)
-- No framework
-- No build step
-- No backend required
+## 🧠 Why vanilla HTML, CSS and JavaScript?
 
-## Run locally
+This project started with those technologies, so the rebuild keeps them intentionally.
 
-Because the project is fully static, you can open `index.html` directly or use any static server, for example:
+The goal is to demonstrate growth in the fundamentals rather than hide an early project behind a framework or template:
+
+- reusable interface patterns
+- responsive layout systems
+- DOM-driven rendering
+- client-side state management
+- Web Storage persistence
+- accessible interaction patterns
+- form validation
+- product filtering and sorting
+- modal / drawer behaviour
+- progressive enhancement
+- visual hierarchy and motion design
+
+## 🧰 Tech stack
+
+| Area | Technology |
+| --- | --- |
+| Structure | HTML5 |
+| Styling | CSS3 |
+| Logic | Vanilla JavaScript (ES6+) |
+| State | Web Storage API (`localStorage`) |
+| Formatting | `Intl.NumberFormat` |
+| Deployment | Static-host friendly / Vercel-ready |
+| Build tooling | None required |
+
+## 📁 Key pages
+
+| Page | Purpose |
+| --- | --- |
+| `index.html` | Product-first landing page |
+| `shop.html` | Search, filters, sorting and product discovery |
+| `journal.html` | Editorial / project storytelling |
+| `reviews.html` | Reviews and local publishing demo |
+| `contact.html` | Contact interaction |
+| `account.html` | Local demo account/session experience |
+| `404.html` | Custom not-found page |
+
+Legacy first-year routes are retained as lightweight compatibility redirects so old links do not simply break.
+
+## 🚀 Run locally
+
+No install or build step is required.
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Then open:
 
-## Main frontend flows to test
+```text
+http://localhost:8000
+```
 
-1. Browse **Shop** and use search, filters and sorting.
-2. Open **Quick view**, select a size and add a product to the bag.
-3. Change quantities, refresh the page and confirm the bag persists.
-4. Complete the **Demo checkout** and confirm the bag clears.
-5. Toggle light/dark mode and refresh.
-6. Add a local review on the **Reviews** page.
-7. Submit the **Contact** and newsletter demos.
-8. Start and clear a local demo session on the **Demo Account** page.
+You can also open `index.html` directly in a browser for most flows.
 
-## Project story
+## 🔒 Demo / privacy note
 
-The goal of this rebuild was not to hide an early project behind React or a template. It was to show growth in core frontend engineering: layout systems, responsive design, accessibility, state management, interaction design, robustness and visual hierarchy—using the same technologies the project began with.
+Search2Get is a **frontend portfolio project**, not a production ecommerce service.
 
----
+- No real payment is processed.
+- No server-side account is created.
+- No credentials are transmitted to a backend.
+- Cart, wishlist, reviews, newsletter entries and demo-session state are stored locally in the browser.
 
-Built by **Rishikesh Munnaluri** as a complete redesign of the original Search2Get first-year frontend project.
+## 🕰️ Project history
+
+The repository history preserves the original 2023 first-year project, including the hand-written early implementation. That history is intentional: the value of this repository is not only the finished interface, but the visible progression from an early frontend build to a much more complete product experience.
+
+## 👨‍💻 Author
+
+Designed and built by **Rishikesh Munnaluri**.
+
+The original project and the modern rebuild both use hand-written HTML, CSS and JavaScript.
