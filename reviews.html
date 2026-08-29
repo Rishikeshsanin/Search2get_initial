@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Search2Get reviews and interactive local review demo.">
-  <title>Reviews — Search2Get</title><link rel="icon" href="i1.png"><link rel="stylesheet" href="index.css">
+  <meta name="description" content="Search2Get reviews and interactive local review experience.">
+  <title>Reviews — Search2Get</title>
+  <link rel="icon" href="i1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="index.css"><link rel="stylesheet" href="v3.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a><div id="site-header"></div>
   <main id="main">
-    <section class="page-hero"><div class="container page-hero-grid reveal"><div><span class="section-kicker">Community</span><h1>Looks good.<br><span style="color:var(--brand)">Feels better.</span></h1><p>A polished review experience with a working client-side form. Add your own review and it will persist locally in this browser.</p></div><span class="page-chip">Local review demo</span></div></section>
+    <section class="page-hero"><div class="container page-hero-grid reveal"><div><span class="section-kicker">Community</span><h1>Looks good.<br><span style="color:var(--v3-accent)">Feels better.</span></h1><p>See what stands out, then add your own take. New reviews are kept locally in this browser so the interaction stays private and lightweight.</p></div><span class="page-chip">Your review stays local</span></div></section>
     <section class="section-sm"><div class="container review-summary">
-      <div class="rating-panel reveal"><span class="section-kicker">Average rating</span><div class="rating-big">4.8</div><div class="stars">★★★★★</div><p class="section-copy">Based on the demo experience and seeded showcase reviews.</p><div class="rating-bars"><div class="rating-row"><span>5 ★</span><div class="rating-bar"><i style="width:82%"></i></div><span>82%</span></div><div class="rating-row"><span>4 ★</span><div class="rating-bar"><i style="width:14%"></i></div><span>14%</span></div><div class="rating-row"><span>3 ★</span><div class="rating-bar"><i style="width:4%"></i></div><span>4%</span></div></div></div>
-      <div class="review-form-card reveal"><span class="section-kicker">Try it</span><h2>Add a local review</h2><form id="reviewForm" class="form-grid"><div class="field"><label for="reviewName">Name</label><input id="reviewName" name="name" maxlength="30" required></div><div class="field"><label for="reviewRating">Rating</label><select id="reviewRating" name="rating"><option value="5">5 — Excellent</option><option value="4">4 — Great</option><option value="3">3 — Good</option><option value="2">2 — Fair</option><option value="1">1 — Needs work</option></select></div><div class="field full"><label for="reviewText">Your review</label><textarea id="reviewText" name="review" maxlength="280" placeholder="What stood out?" required></textarea></div><div class="field full"><button class="btn btn-primary" type="submit">Publish locally</button></div></form><p class="form-note">This is intentionally frontend-only. Your review is stored in localStorage and is never uploaded.</p></div>
+      <div class="rating-panel reveal"><span class="section-kicker">Average rating</span><div class="rating-big">4.8</div><div class="stars">★★★★★</div><p class="section-copy">Based on the seeded showcase reviews and the experience represented in this concept.</p><div class="rating-bars"><div class="rating-row"><span>5 ★</span><div class="rating-bar"><i style="width:82%"></i></div><span>82%</span></div><div class="rating-row"><span>4 ★</span><div class="rating-bar"><i style="width:14%"></i></div><span>14%</span></div><div class="rating-row"><span>3 ★</span><div class="rating-bar"><i style="width:4%"></i></div><span>4%</span></div></div></div>
+      <div class="review-form-card reveal"><span class="section-kicker">Add yours</span><h2>Leave a review</h2><form id="reviewForm" class="form-grid"><div class="field"><label for="reviewName">Name</label><input id="reviewName" name="name" maxlength="30" required></div><div class="field"><label for="reviewRating">Rating</label><select id="reviewRating" name="rating"><option value="5">5 — Excellent</option><option value="4">4 — Great</option><option value="3">3 — Good</option><option value="2">2 — Fair</option><option value="1">1 — Needs work</option></select></div><div class="field full"><label for="reviewText">Your review</label><textarea id="reviewText" name="review" maxlength="280" placeholder="What stood out?" required></textarea></div><div class="field full"><button class="btn btn-primary" type="submit">Publish locally</button></div></form><p class="form-note">Your review is stored in localStorage and never uploaded.</p></div>
     </div></section>
     <section class="section-sm"><div class="container"><div class="section-head reveal"><div><span class="section-kicker">Reviews</span><h2 class="section-title">From the<br><span class="accent">fitting room.</span></h2></div></div><div class="review-grid" id="reviewGrid"></div></div></section>
-  </main><div id="site-footer"></div><script src="index.js"></script>
+  </main><div id="site-footer"></div><script src="index.js"></script><script src="visual-refresh.js"></script>
 </body>
 </html>
