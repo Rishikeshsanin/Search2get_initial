@@ -3,18 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Search2Get is a modern fashion discovery storefront for finding expressive everyday essentials with fast browsing, curated collections and a polished shopping flow.">
-  <meta name="theme-color" content="#f4f0e8">
-  <meta property="og:title" content="Search2Get — Find your everyday">
-  <meta property="og:description" content="Curated everyday fashion with quick discovery, persistent wishlist and bag, and a polished responsive shopping experience.">
+  <meta name="description" content="Search2Get — a modern fashion storefront with live apparel products, fast discovery, wishlist, bag and responsive shopping.">
+  <meta name="theme-color" content="#11110f">
+  <meta property="og:title" content="Search2Get — Find it. Wear it.">
+  <meta property="og:description" content="A product-first fashion storefront powered by a live ecommerce catalog.">
   <meta property="og:type" content="website">
-  <title>Search2Get — Find your everyday</title>
-  <link rel="icon" href="i1.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="v3.css">
+  <title>Search2Get — Find it. Wear it.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="storefront.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -22,120 +18,100 @@
 
   <main id="main">
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <span class="eyebrow-pill"><span class="dot"></span> New season · everyday icons</span>
-          <h1>Style worth <span class="outline">stopping</span> for.</h1>
-          <p>Curated essentials, expressive staples and effortless fits—made easier to discover with a faster, cleaner way to browse what actually feels like you.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="shop.html">Shop the collection <span aria-hidden="true">→</span></a>
-            <a class="btn btn-secondary" href="#story">Our point of view</a>
+      <div class="shell hero-shell">
+        <div class="hero-copy">
+          <div>
+            <span class="eyebrow" style="color:#d9ff63">Search less · wear more</span>
+            <h1>Find it.<span>Wear it.</span></h1>
+            <p>A sharper way to shop everyday style. Real product data, focused collections, clear pricing and everything you need to move from “maybe” to “mine.”</p>
+            <div class="hero-actions">
+              <a class="btn btn-light" href="shop.html">Shop new arrivals →</a>
+              <a class="btn btn-dark" style="border:1px solid #444" href="shop.html?segment=Women">Explore women</a>
+            </div>
           </div>
-          <div class="hero-proof" aria-label="Shopping highlights">
-            <div><strong>8 curated</strong><span>signature styles</span></div><span class="divider"></span>
-            <div><strong>Quick discovery</strong><span>search · filter · sort</span></div><span class="divider"></span>
-            <div><strong>Saved for you</strong><span>bag & wishlist</span></div>
+          <div class="hero-proof">
+            <div><strong>Live catalog</strong><span>API-powered products</span></div>
+            <div><strong>Saved bag</strong><span>Persists on your device</span></div>
+            <div><strong>Fast discovery</strong><span>Search · filter · sort</span></div>
           </div>
         </div>
-        <div class="hero-visual reveal">
-          <div class="hero-frame"><img src="hero-1.png" alt="Search2Get fashion campaign visual"></div>
-          <div class="hero-stamp">NEW<br>SEASON</div>
-          <div class="float-card one"><strong>Fresh drop</strong><small>Everyday tees · from ₹599</small></div>
-          <div class="float-card two"><strong>Made to browse</strong><small>Search · filters · quick view</small></div>
+        <div class="hero-visual">
+          <span class="hero-badge">Product first</span>
+          <div class="hero-products" id="heroProducts" aria-label="Featured products"></div>
         </div>
       </div>
     </section>
 
-    <div class="marquee-wrap" aria-hidden="true">
-      <div class="marquee">
-        <span><i></i>Everyday essentials <i></i>Relaxed silhouettes <i></i>Quick view <i></i>Saved wishlist <i></i>Responsive shopping <i></i>Easy checkout</span>
-        <span><i></i>Everyday essentials <i></i>Relaxed silhouettes <i></i>Quick view <i></i>Saved wishlist <i></i>Responsive shopping <i></i>Easy checkout</span>
-      </div>
-    </div>
-
-    <section class="section-sm">
-      <div class="container stats-grid reveal">
-        <div class="stat"><strong>01</strong><span>Curated, not crowded</span></div>
-        <div class="stat"><strong>02</strong><span>Designed for every screen</span></div>
-        <div class="stat"><strong>03</strong><span>Fast product discovery</span></div>
-        <div class="stat"><strong>04</strong><span>Your picks stay saved</span></div>
+    <section class="trust-strip" aria-label="Store benefits">
+      <div class="shell trust-grid">
+        <div class="trust-item"><strong>Free delivery</strong><span>On orders above ₹2,499</span></div>
+        <div class="trust-item"><strong>Easy returns</strong><span>7-day demo return policy</span></div>
+        <div class="trust-item"><strong>Live inventory</strong><span>Product stock from the catalog API</span></div>
+        <div class="trust-item"><strong>Built for mobile</strong><span>Shop cleanly on every screen</span></div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="collections-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <div><span class="section-kicker">Collections</span><h2 class="section-title" id="collections-title">Pick a lane.<br><span class="accent">Make it yours.</span></h2></div>
-          <p class="section-copy">A focused edit of versatile pieces that work harder in your wardrobe—clean silhouettes, relaxed shapes and easy styling without the endless scroll.</p>
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div><span class="section-kicker">Shop your way</span><h2 class="section-title">Three edits.<br>Zero noise.</h2></div>
+          <p class="section-copy">The catalog is grouped into clear shopping lanes instead of flooding the page with everything at once.</p>
         </div>
-        <div class="category-grid">
-          <a class="category-card reveal" href="shop.html?category=Women">
-            <img src="g1.webp" alt="Women's fashion collection" loading="lazy">
-            <span class="category-arrow" aria-hidden="true">→</span>
-            <div class="category-content"><span>01 · Collection</span><strong>Women</strong><span>Soft structure · effortless layers</span></div>
-          </a>
-          <a class="category-card reveal" href="shop.html?category=Men">
-            <img src="M1.webp" alt="Men's fashion collection" loading="lazy">
-            <span class="category-arrow" aria-hidden="true">→</span>
-            <div class="category-content"><span>02 · Collection</span><strong>Men</strong><span>Relaxed cuts · clean essentials</span></div>
-          </a>
-          <a class="category-card reveal" href="journal.html">
-            <img src="trend2.webp" alt="Search2Get fashion journal" loading="lazy">
-            <span class="category-arrow" aria-hidden="true">→</span>
-            <div class="category-content"><span>03 · Editorial</span><strong>Journal</strong><span>Fits · ideas · inspiration</span></div>
-          </a>
-        </div>
+        <div class="category-grid" id="categoryGrid"></div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="featured-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <div><span class="section-kicker">Trending now</span><h2 class="section-title" id="featured-title">The <span class="accent">front row.</span></h2></div>
-          <a class="btn btn-secondary" href="shop.html">View all styles →</a>
+    <section class="section-tight">
+      <div class="shell">
+        <div class="section-head">
+          <div><span class="section-kicker">Trending now</span><h2 class="section-title">Worth a second look.</h2></div>
+          <a class="section-link" href="shop.html">View the full collection →</a>
         </div>
         <div class="product-grid" id="featuredGrid"></div>
       </div>
     </section>
 
-    <section class="section" id="story">
-      <div class="container editorial reveal">
-        <div class="editorial-grid">
-          <div class="editorial-copy">
-            <span class="section-kicker">Our point of view</span>
-            <h2 class="section-title">Less searching.<br>More finding.</h2>
-            <p>Search2Get is built around a simple idea: fashion discovery should feel inspiring, not exhausting. We keep the edit intentional, the interface quiet and the useful actions close—so the clothes stay at the center of the experience.</p>
-            <span class="editorial-note">Find it. Style it. Make it yours.</span>
-          </div>
-          <div class="editorial-media"><img src="main.png" alt="Search2Get editorial fashion visual" loading="lazy"></div>
+    <section class="section">
+      <div class="shell brand-story">
+        <div>
+          <span class="eyebrow" style="color:#37372f">The Search2Get idea</span>
+          <h2>Better finds.<br>Less clutter.</h2>
+          <p>The original Search2Get started as a first-year frontend project. This version keeps the handmade HTML, CSS and JavaScript spirit, but rebuilds the experience around the things a real store needs: live products, useful states, trustworthy shopping details and responsive interactions.</p>
+          <a class="btn btn-dark" href="journal.html">Read the rebuild story →</a>
+        </div>
+        <div class="story-points">
+          <div class="story-point"><b>01</b><div><strong>Actual catalog data</strong><span>Names, images, ratings, discounts, inventory, shipping and returns come from the product API.</span></div></div>
+          <div class="story-point"><b>02</b><div><strong>Product-first visuals</strong><span>No random model photography. Store imagery comes from the products being sold.</span></div></div>
+          <div class="story-point"><b>03</b><div><strong>Business-like flow</strong><span>Wishlist, bag, quantities, free-shipping progress, product gallery and checkout simulation.</span></div></div>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="reviews-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <div><span class="section-kicker">Community</span><h2 class="section-title" id="reviews-title">Worn well.<br><span class="accent">Rated honestly.</span></h2></div>
-          <a class="btn btn-secondary" href="reviews.html">All reviews →</a>
-        </div>
-        <div class="review-grid">
-          <article class="review-card reveal"><div class="stars">★★★★★</div><blockquote>“Clean, fast and actually enjoyable to browse. I found what I wanted without digging through endless pages.”</blockquote><div class="review-person"><span class="avatar">A</span><div><strong>Aarav</strong><span>Community review</span></div></div></article>
-          <article class="review-card reveal"><div class="stars">★★★★★</div><blockquote>“The quick view and saved bag make the whole experience feel effortless, especially when I come back later.”</blockquote><div class="review-person"><span class="avatar">M</span><div><strong>Maya</strong><span>Community review</span></div></div></article>
-          <article class="review-card reveal"><div class="stars">★★★★☆</div><blockquote>“Simple collection, strong presentation and genuinely comfortable to use on mobile.”</blockquote><div class="review-person"><span class="avatar">K</span><div><strong>Kabir</strong><span>Community review</span></div></div></article>
-        </div>
+    <section class="section-tight">
+      <div class="shell service-grid">
+        <div class="service-card"><strong>Quick product view</strong><span>Multiple images, details, size selection and stock status.</span></div>
+        <div class="service-card"><strong>Persistent wishlist</strong><span>Your saved pieces survive refreshes in this browser.</span></div>
+        <div class="service-card"><strong>Clear pricing</strong><span>INR display, original price and API discount information.</span></div>
+        <div class="service-card"><strong>Graceful fallback</strong><span>If the catalog API fails, the storefront stays usable.</span></div>
       </div>
     </section>
 
-    <section class="section-sm">
-      <div class="container newsletter reveal">
-        <div><h2>Drop alerts,<br>minus the noise.</h2><p>Get first dibs on new edits, styling inspiration and fresh arrivals. Your email stays in this browser for this showcase experience.</p></div>
-        <form class="newsletter-form" id="newsletterForm"><label class="skip-link" for="newsletterEmail">Email address</label><input id="newsletterEmail" type="email" name="email" placeholder="you@example.com" autocomplete="email" required><button class="btn" type="submit">Join the list</button></form>
+    <section class="section">
+      <div class="shell">
+        <div class="section-head"><div><span class="section-kicker">Community</span><h2 class="section-title">People notice<br>the difference.</h2></div><a class="section-link" href="reviews.html">See all reviews →</a></div>
+        <div class="review-grid" id="reviewGrid"></div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="shell newsletter">
+        <div><h2>Fresh finds,<br>not inbox noise.</h2><p>Save an email locally to try the newsletter flow. Nothing is sent to a server.</p></div>
+        <form class="newsletter-form" id="newsletterForm"><input type="email" name="email" placeholder="you@example.com" autocomplete="email" aria-label="Email address" required><button class="btn" type="submit">Join the list</button></form>
       </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
-  <script src="index.js"></script>
-  <script src="visual-refresh.js"></script>
+  <script src="store.js"></script>
 </body>
 </html>
