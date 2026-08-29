@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 190" role="img" aria-labelledby="title desc">
+  <title id="title">Search2Get</title>
+  <desc id="desc">Search2Get fashion storefront wordmark</desc>
+  <g fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M58 53c22-27 71-30 97-7 24 22 18 56-9 70-18 9-45 7-65 13-26 8-32 36-12 51 26 20 74 10 96-13"/>
+    <path d="M153 43l22 19-22 19"/>
+  </g>
+  <text x="208" y="126" fill="currentColor" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="700" letter-spacing="-5">Search2Get</text>
+  <text x="212" y="164" fill="currentColor" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" letter-spacing="8">FIND IT. WEAR IT.</text>
+</svg>

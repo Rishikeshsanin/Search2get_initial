@@ -1,19 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Search2Get local-only member experience.">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Search2Get local account demo.">
   <title>Account — Search2Get</title>
-  <link rel="icon" href="i1.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="index.css"><link rel="stylesheet" href="v3.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="storefront.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a><div id="site-header"></div>
-  <main id="main" class="login-page"><div class="login-wrap reveal">
-    <section class="login-art"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>Search2<em>Get</em></span></a><div><span class="section-kicker">Member space</span><h2>Save the mood.<br>Come back later.</h2><p>This local-only account experience demonstrates validation, password visibility and saved session state without pretending there is a production authentication backend.</p></div><small>Private by design · local browser session</small></section>
-    <section class="login-card"><span class="section-kicker">Member access</span><h1>Welcome back.</h1><p class="section-copy" style="margin-top:0">Use any valid email and a password with at least 4 characters.</p><form id="loginForm"><div class="field"><label for="loginEmail">Email</label><input id="loginEmail" type="email" autocomplete="email" required placeholder="you@example.com"></div><div class="field"><label for="loginPassword">Password</label><div class="password-wrap"><input id="loginPassword" type="password" autocomplete="current-password" minlength="4" required placeholder="••••••••"><button class="password-toggle" id="passwordToggle" type="button" aria-label="Show password">◉</button></div></div><button class="btn btn-primary" type="submit">Start local session</button></form><div class="demo-note">Credentials never leave your browser and are not persisted; only the resulting local profile name/email is stored for the showcase session.</div><div id="sessionHost" style="margin-top:16px"></div></section>
+  <main id="main" class="login-page"><div class="login-wrap">
+    <section class="login-art"><a class="brand" href="index.html"><img src="assets/search2get-logo.svg" alt="Search2Get"></a><div><span class="eyebrow" style="color:#d9ff63">Member space</span><h2>Save the vibe.<br>Keep it local.</h2><p>This account screen demonstrates form validation, password visibility and persistent client-side session state without making fake authentication claims.</p></div><small>Portfolio demo · local session only</small></section>
+    <section class="login-card"><span class="section-kicker">Account demo</span><h1>Welcome back.</h1><p class="section-copy">Use any valid email and a password with at least four characters.</p><form id="loginForm"><div class="field"><label for="loginEmail">Email</label><input id="loginEmail" type="email" autocomplete="email" placeholder="you@example.com" required></div><div class="field" style="margin-top:12px"><label for="loginPassword">Password</label><div class="password-wrap"><input id="loginPassword" type="password" minlength="4" autocomplete="current-password" placeholder="••••••••" required><button class="password-toggle" id="passwordToggle" type="button" aria-label="Show password">◉</button></div></div><button class="btn btn-dark btn-wide" type="submit" style="margin-top:18px">Start local session</button></form><div class="demo-note">No credentials are uploaded or stored. Only the resulting demo name/email session is saved locally in this browser.</div><div id="sessionHost"></div></section>
   </div></main>
-  <div id="site-footer"></div><script src="index.js"></script><script src="visual-refresh.js"></script>
+  <div id="site-footer"></div><script src="store.js"></script>
 </body>
 </html>

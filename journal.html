@@ -1,30 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Search2Get Journal — styling notes, frontend design thinking and the story behind the rebuild.">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Search2Get Journal — the product and engineering story behind the API-backed storefront rebuild.">
   <title>Journal — Search2Get</title>
-  <link rel="icon" href="i1.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="index.css"><link rel="stylesheet" href="v3.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="storefront.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a><div id="site-header"></div>
   <main id="main">
-    <section class="page-hero"><div class="container page-hero-grid reveal"><div><span class="section-kicker">Search2Get Journal</span><h1>Ideas you can<br><span style="color:var(--v3-accent)">wear.</span></h1><p>Part fashion editorial, part build diary. A place for styling notes and the decisions that transformed this project from a first-year static site into a much sharper digital experience.</p></div><span class="page-chip">Editorial · design · frontend</span></div></section>
-    <section class="section-sm"><div class="container story-grid">
-      <article class="story-card story-feature reveal"><img src="trend1.webp" alt="Women's styling editorial" loading="lazy"><div class="story-overlay"><small>Style note · 01</small><h2>One tee, three moods.</h2><p>Use proportion, layering and contrast to make an everyday top feel intentional.</p></div></article>
-      <div class="story-stack">
-        <article class="story-card reveal"><img src="trend2.webp" alt="Men's styling editorial" loading="lazy"><div class="story-overlay"><small>Style note · 02</small><h2>Relaxed, not careless.</h2><p>How fit changes the entire silhouette.</p></div></article>
-        <article class="story-card reveal"><img src="main.png" alt="Search2Get build story visual" loading="lazy"><div class="story-overlay"><small>Build diary · 03</small><h2>Why vanilla stayed.</h2><p>Keeping the original stack made the glow-up more meaningful.</p></div></article>
-      </div>
+    <section class="page-hero"><div class="shell page-hero-inner"><div><span class="section-kicker">Search2Get Journal</span><h1>A first project,<br>rebuilt properly.</h1><p>The original Search2Get was hand-written during first year. V4 keeps that history visible, but treats the current experience like a real storefront: product data first, clearer UX, better state handling and a deliberate visual system.</p></div><span class="page-chip">2023 → 2026 · vanilla web</span></div></section>
+
+    <section class="section-tight"><div class="shell content-grid">
+      <article class="content-card"><span class="section-kicker">Then</span><h2>Static pages and manually placed products.</h2><p>The first version proved the fundamentals: HTML structure, CSS styling and JavaScript written line by line. It also had the limitations you would expect from an early frontend project—fixed content, inconsistent layout, weak responsiveness and no real product state.</p></article>
+      <article class="content-card"><span class="section-kicker">Now</span><h2>A storefront driven by a live catalog.</h2><p>The current build loads apparel through a product API, normalizes it into one store model and uses the same product objects for homepage merchandising, search, filters, quick view, wishlist, bag totals and checkout simulation.</p></article>
     </div></section>
-    <section class="section"><div class="container"><div class="section-head reveal"><div><span class="section-kicker">Build notes</span><h2 class="section-title">What changed<br><span class="accent">under the hood.</span></h2></div><p class="section-copy">The strongest upgrade was not adding a framework. It was applying better product thinking to the same fundamentals.</p></div><div class="article-list">
-      <article class="article-card reveal"><div class="num">01</div><h3>From fixed pixels to responsive systems</h3><p>Fluid typography, modern grids, adaptable cards and mobile navigation replace brittle widths and margin hacks.</p></article>
-      <article class="article-card reveal"><div class="num">02</div><h3>From static cards to real interactions</h3><p>Product data now powers search, filtering, sorting, quick view, wishlist, cart quantities and a complete checkout simulation.</p></article>
-      <article class="article-card reveal"><div class="num">03</div><h3>From visual-only to usable</h3><p>Keyboard controls, focus states, semantic structure, reduced-motion support and clear state messaging make the interface more credible.</p></article>
+
+    <section class="section"><div class="shell"><div class="section-head"><div><span class="section-kicker">Engineering decisions</span><h2 class="section-title">What actually<br>changed.</h2></div><p class="section-copy">The V4 rebuild is less about adding decoration and more about making the frontend behave like a coherent product.</p></div><div class="article-list">
+      <article class="article-card"><b>01</b><h3>One catalog model</h3><p>Raw API products are transformed into predictable fields for segment, category, INR display pricing, original price, stock, sizes, images, shipping and returns.</p></article>
+      <article class="article-card"><b>02</b><h3>Product-first imagery</h3><p>The old fashion portraits and editorial substitutions were removed from the active experience. The store now displays the products it is actually selling.</p></article>
+      <article class="article-card"><b>03</b><h3>Resilient states</h3><p>Loading skeletons, empty search states, image fallbacks and an offline catalog fallback keep the interface usable when dependencies fail.</p></article>
+      <article class="article-card"><b>04</b><h3>Shopping state</h3><p>Wishlist, bag quantities, shipping threshold, selected sizes and local account/form demos persist without pretending there is a production backend.</p></article>
+      <article class="article-card"><b>05</b><h3>Responsive system</h3><p>Desktop, tablet and mobile layouts use the same visual language while controls reorganize instead of simply shrinking.</p></article>
+      <article class="article-card"><b>06</b><h3>History preserved</h3><p>The early implementation remains in Git history, so the repository shows growth rather than erasing the project that started it.</p></article>
     </div></div></section>
-    <section class="section-sm"><div class="container editorial reveal"><div class="editorial-grid"><div class="editorial-copy"><span class="section-kicker">Project principle</span><h2 class="section-title">A glow-up should show growth, not erase history.</h2><p>The original code remains in Git history. This version demonstrates what stronger frontend judgement looks like after a few years of learning.</p><a class="btn btn-secondary" href="https://github.com/Rishikeshsanin/Search2get_initial" target="_blank" rel="noreferrer" style="margin-top:18px;width:fit-content">Explore Git history →</a></div><div class="editorial-media"><img src="hero-1.png" alt="Search2Get project visual" loading="lazy"></div></div></div></section>
-  </main><div id="site-footer"></div><script src="index.js"></script><script src="visual-refresh.js"></script>
+
+    <section class="section-tight"><div class="shell brand-story"><div><span class="eyebrow" style="color:#37372f">Project principle</span><h2>Don’t hide the old work.<br>Outgrow it.</h2><p>The point of this rebuild is not to pretend the first version never existed. It is to make the difference between then and now obvious.</p><a class="btn btn-dark" href="https://github.com/Rishikeshsanin/Search2get_initial" target="_blank" rel="noreferrer">Explore the repository →</a></div><div class="story-points"><div class="story-point"><b>HTML</b><div><strong>Semantic structure</strong><span>Cleaner information hierarchy and reusable page shells.</span></div></div><div class="story-point"><b>CSS</b><div><strong>Full design system</strong><span>Responsive tokens, layouts, controls, cards and interaction states.</span></div></div><div class="story-point"><b>JS</b><div><strong>Real client logic</strong><span>API data, catalog state, cart, wishlist, modals, forms and fallbacks.</span></div></div></div></div></section>
+  </main>
+  <div id="site-footer"></div><script src="store.js"></script>
 </body>
 </html>

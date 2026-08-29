@@ -3,39 +3,81 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Browse the Search2Get collection with instant search, category filters, sorting, wishlist, quick view and a persistent shopping bag.">
+  <meta name="description" content="Shop Search2Get — browse live apparel products with search, collection filters, categories, sorting, wishlist and quick view.">
+  <meta name="theme-color" content="#11110f">
   <meta property="og:title" content="Shop — Search2Get">
-  <meta property="og:description" content="Discover curated everyday essentials with fast search, filters, quick view and saved favourites.">
-  <meta property="og:type" content="website">
+  <meta property="og:description" content="Browse a live apparel catalog with product-first imagery, clear pricing and fast filters.">
   <title>Shop — Search2Get</title>
-  <link rel="icon" href="i1.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="v3.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="storefront.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a><div id="site-header"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
   <main id="main">
-    <section class="page-hero">
-      <div class="container page-hero-grid reveal">
-        <div><span class="section-kicker">The collection</span><h1>Find your<br><span style="color:var(--v3-accent)">everyday.</span></h1><p>Explore a focused edit of easy staples and expressive essentials. Search instantly, narrow by collection, sort your way and save the pieces you want to come back to.</p></div>
-        <span class="page-chip">8 curated styles · from ₹599</span>
+    <section class="shop-hero">
+      <div class="shell shop-hero-grid">
+        <div>
+          <span class="section-kicker">Live apparel catalog</span>
+          <h1>Find your<br>next repeat.</h1>
+          <p>Browse shirts, dresses, footwear, bags, watches, jewellery and sunglasses. The products, product imagery, ratings, stock and discount data are loaded from a live ecommerce API.</p>
+        </div>
+        <div class="shop-stamp">New<br>season<br>edit</div>
       </div>
     </section>
-    <section class="section-sm" style="padding-top:20px">
-      <div class="container">
-        <div class="catalog-toolbar reveal" aria-label="Product controls">
-          <label class="search-field" for="productSearch"><span aria-hidden="true" style="position:absolute;left:14px;top:50%;transform:translateY(-50%)">⌕</span><input id="productSearch" type="search" placeholder="Search styles, collections…" autocomplete="off"></label>
-          <div class="filter-group" role="group" aria-label="Filter collection"><button class="filter-chip active" data-filter="All" type="button">All</button><button class="filter-chip" data-filter="Women" type="button">Women</button><button class="filter-chip" data-filter="Men" type="button">Men</button></div>
-          <label><span class="skip-link">Sort products</span><select class="select" id="sortProducts"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="rating">Top rated</option></select></label>
+
+    <section class="catalog-shell">
+      <div class="shell">
+        <div class="api-notice hidden" id="apiNotice">The live catalog is temporarily unavailable, so Search2Get is showing its built-in fallback edit. Shopping interactions still work.</div>
+
+        <div class="catalog-toolbar" aria-label="Catalog controls">
+          <div class="toolbar-top">
+            <label class="search-field" for="productSearch">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4" stroke-linecap="round"/></svg>
+              <input id="productSearch" type="search" placeholder="Search product, brand or category…" autocomplete="off">
+            </label>
+
+            <div class="filter-group" role="group" aria-label="Collection filter">
+              <button class="filter-chip active" type="button" data-filter="All">All</button>
+              <button class="filter-chip" type="button" data-filter="Women">Women</button>
+              <button class="filter-chip" type="button" data-filter="Men">Men</button>
+              <button class="filter-chip" type="button" data-filter="Accessories">Accessories</button>
+            </div>
+
+            <div style="display:flex;gap:10px;order:3;min-width:0">
+              <select class="category-select" id="categorySelect" aria-label="Product category">
+                <option value="All">All categories</option>
+                <option value="mens-shirts">Men’s shirts</option>
+                <option value="mens-shoes">Men’s shoes</option>
+                <option value="tops">Women’s tops</option>
+                <option value="womens-dresses">Dresses</option>
+                <option value="womens-shoes">Women’s shoes</option>
+                <option value="womens-bags">Bags</option>
+                <option value="womens-jewellery">Jewellery</option>
+                <option value="mens-watches">Men’s watches</option>
+                <option value="womens-watches">Women’s watches</option>
+                <option value="sunglasses">Sunglasses</option>
+              </select>
+
+              <select class="sort-select" id="sortProducts" aria-label="Sort products">
+                <option value="featured">Featured</option>
+                <option value="discount">Biggest discount</option>
+                <option value="rating">Top rated</option>
+                <option value="price-low">Price: low to high</option>
+                <option value="price-high">Price: high to low</option>
+              </select>
+            </div>
+          </div>
+          <div class="toolbar-bottom"><div class="catalog-summary" id="catalogSummary" aria-live="polite">Loading products…</div><div class="catalog-note">Wishlist and bag are saved locally on this device.</div></div>
         </div>
-        <div class="catalog-summary" id="catalogSummary" aria-live="polite"></div>
+
         <div class="product-grid" id="catalogGrid"></div>
       </div>
     </section>
   </main>
-  <div id="site-footer"></div><script src="index.js"></script><script src="visual-refresh.js"></script>
+
+  <div id="site-footer"></div>
+  <script src="store.js"></script>
 </body>
 </html>
