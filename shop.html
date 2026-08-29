@@ -45,27 +45,29 @@
               <button class="filter-chip" type="button" data-filter="Accessories">Accessories</button>
             </div>
 
-            <select class="category-select" id="categorySelect" aria-label="Product category">
-              <option value="All">All categories</option>
-              <option value="mens-shirts">Men’s shirts</option>
-              <option value="mens-shoes">Men’s shoes</option>
-              <option value="tops">Women’s tops</option>
-              <option value="womens-dresses">Dresses</option>
-              <option value="womens-shoes">Women’s shoes</option>
-              <option value="womens-bags">Bags</option>
-              <option value="womens-jewellery">Jewellery</option>
-              <option value="mens-watches">Men’s watches</option>
-              <option value="womens-watches">Women’s watches</option>
-              <option value="sunglasses">Sunglasses</option>
-            </select>
+            <div style="display:flex;gap:10px;order:3;min-width:0">
+              <select class="category-select" id="categorySelect" aria-label="Product category">
+                <option value="All">All categories</option>
+                <option value="mens-shirts">Men’s shirts</option>
+                <option value="mens-shoes">Men’s shoes</option>
+                <option value="tops">Women’s tops</option>
+                <option value="womens-dresses">Dresses</option>
+                <option value="womens-shoes">Women’s shoes</option>
+                <option value="womens-bags">Bags</option>
+                <option value="womens-jewellery">Jewellery</option>
+                <option value="mens-watches">Men’s watches</option>
+                <option value="womens-watches">Women’s watches</option>
+                <option value="sunglasses">Sunglasses</option>
+              </select>
 
-            <select class="sort-select" id="sortProducts" aria-label="Sort products">
-              <option value="featured">Featured</option>
-              <option value="discount">Biggest discount</option>
-              <option value="rating">Top rated</option>
-              <option value="price-low">Price: low to high</option>
-              <option value="price-high">Price: high to low</option>
-            </select>
+              <select class="sort-select" id="sortProducts" aria-label="Sort products">
+                <option value="featured">Featured</option>
+                <option value="discount">Biggest discount</option>
+                <option value="rating">Top rated</option>
+                <option value="price-low">Price: low to high</option>
+                <option value="price-high">Price: high to low</option>
+              </select>
+            </div>
           </div>
           <div class="toolbar-bottom"><div class="catalog-summary" id="catalogSummary" aria-live="polite">Loading products…</div><div class="catalog-note">Wishlist and bag are saved locally on this device.</div></div>
         </div>
