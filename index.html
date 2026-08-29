@@ -1,253 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search2Get</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="style2.css">
-    <link rel="icon" href="i1.png">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-</style>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search2Get is a modern fashion discovery storefront rebuilt from a first-year frontend project using HTML, CSS and JavaScript.">
+  <meta name="theme-color" content="#f7f5f0">
+  <title>Search2Get — Fashion, rediscovered</title>
+  <link rel="icon" href="i1.png">
+  <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <nav>
-        <div class="logo">
-           <a href="index.html"> <h1><img src="i3.png" height="29px" alt="s2g">SEARCH2GET</h1></a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow-pill"><span class="dot"></span> Search less. Find your look.</span>
+          <h1>Style worth <span class="outline">stopping</span> for.</h1>
+          <p>Search2Get turns everyday fashion discovery into a cleaner, faster experience—curated essentials, expressive staples and a frontend flow that actually feels finished.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="shop.html">Shop the drop <span aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="#story">See the rebuild</a>
+          </div>
+          <div class="hero-proof" aria-label="Project highlights">
+            <div><strong>8 curated</strong><span>demo styles</span></div><span class="divider"></span>
+            <div><strong>100% vanilla</strong><span>HTML · CSS · JS</span></div><span class="divider"></span>
+            <div><strong>Local-first</strong><span>cart & wishlist</span></div>
+          </div>
         </div>
-        <ul>
-            <a  id="homes" href="#" >HOME</a>
-            <a href="clothes.html">CLOTHES</a>
-            <a  id="blogs" href="bloger.html">Blogs</a>
-            <a  id="reviews" href="reviewer.html">REVIEW</a>
-            <a  id="contacts" href="contacter.html">CONTACT US</a>
-            <!-- <button id="login">Log In</button> -->
-            <a href="login.html"> <button id="login">Log In</button></a>
-           <a href="#"> <i class="fa fa-shopping-cart" style="font-size:24px"></i></a>
-            <!-- <a href="">fa <fa-shopping-cart></fa-shopping-cart></a> -->
-        </ul>
-    </nav>
-    <div id="log">
-        <input id="logName" type="text" placeholder="Enter Email">
-        <input type="password" placeholder="Enter Password"><br>
-        <button id="btn">Log In</button>
+        <div class="hero-visual reveal">
+          <div class="hero-frame"><img src="hero-1.png" alt="Search2Get fashion campaign visual"></div>
+          <div class="hero-stamp">2023 → now<br>glow-up</div>
+          <div class="float-card one"><strong>New drop</strong><small>Everyday tees · from ₹599</small></div>
+          <div class="float-card two"><strong>Built to browse</strong><small>Search · filters · quick view</small></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee">
+        <span><i></i>Responsive by default <i></i>Persistent bag <i></i>Dark mode <i></i>Keyboard friendly <i></i>Quick view <i></i>Vanilla JavaScript</span>
+        <span><i></i>Responsive by default <i></i>Persistent bag <i></i>Dark mode <i></i>Keyboard friendly <i></i>Quick view <i></i>Vanilla JavaScript</span>
+      </div>
     </div>
 
-    <div class="main" >
-        <div class="text">
-            <h1>Great Deals Exciting Offers</h1>
-            <h3>Save Upto 30% Off</h3>
-            <p>ONLINE SHOPPING MADE EASY AT SEARCH2GET <br>
-                If you would like to experience the best of online shopping <br> for men, women and kids in India.
-            
- Search2get is the ultimate <br> destination for fashion and lifestyle, being host <br> to a wide array of merchandise including clothing, footwear,<br>   accessories, jewellery, personal care products and more
-            </p>
-            <button id="btn1">Explore</button>
-        </div>
-        <div class="main" id="right"></div>
-      
-    </div>
-    <div class="women" id="cloth">
-        <div class="head">
-            <h1>Trending <span>Women T-Shirt</span></h1>
-        </div>
-        <div class="shop">
-            <div class="card">
-                <img src="g1.webp" alt="">
-                <div class="cardText">
-                    <p>Trending T-Shirts</p>
-                    <h3>₹300</h3>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-           
-            <div class="card">
-                <img src="g4.webp" alt="">
-                <div class="cardText">
-                    <p>Trending T-Shirts</p>
-                    <h3>₹400</h3>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <button>Add to Cart</button> 
-                </div>
-            </div>
-            <div class="card">
-                <img src="g3.webp" alt="">
-                <div class="cardText">
-                    <p>Trending T-Shirts</p>
-                    <h3>₹350</h3>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="women" id="cloth">
-        <div class="head">
-            <h1>Trending <span>Men's T-Shirt</span></h1>
-        </div>
-        <div class="shop">
-            <div class="card">
-                <img src="M1.webp" alt="">
-                <div class="cardText">
-                    <p>Trending T-Shirts</p>
-                    <h3>₹300</h3>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="M2.webp" alt="">
-                <div class="cardText">
-                    <p>Trending T-Shirts</p>
-                    <h3>₹400</h3>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="M3.webp" alt="">
-                <div class="cardText">
-                    <p>Trending T-Shirts</p>
-                    <h3>₹350</h3>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i> 
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- blogs -->
-    <div class="trend" id="blog">
-        <div class="head">
-            <h1>Read <span>Blogs</span></h1>
-        </div>
-        <div class="trending">
-            <div class="trendCard">
-                <img src="trend1.webp" alt="">
-                <div class="trendText">
-                    <h2>Girl's Trending Tops</h2>
-                    <p>this website is selling the nice products in the better prices.literally loved the products</p>
-                    <a href="https://www.faballey.com/blog" >Read More</a >
-                </div>
-            </div>
-            <div class="trendCard">
-                <img src="trend2.webp" alt="">
-                <div class="trendText">
-                    <h2>Bous Trending T-Shirt</h2>
-                    <p>The Quality of the dresses are really so good and i got the exact fit</p>
-                    <a href="https://www.apetogentleman.com/">Read More</a >
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- review -->
-    <div class="blog" id="review">
-        <div class="head">
-            <h1>Customer <span>Review</span></h1>
-        </div>
-        <div class="read">
-            <div class="readBlog">
-             <img src="r1.jpg" alt="">
-             <p>i had the best experience while shopping in this website, It is easy to use and understand and i found my favorite clothings in this website.</p>
-                   <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i> 
-            </div>
-            <div class="readBlog"> 
-                <img src="r2.jpg" alt="">
-                <p>this website is selling the nice products in the better prices.literally loved the products </p>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i> 
-               </div>
-               <div class="readBlog">
-                <img src="r3.jpg" alt="">
-                <p>i had the best experience while shopping in this website, It is easy to use and understand and i found my favorite clothings in this website.</p>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i> 
-               </div>
-        </div>
-    </div>
-    <div class="contact" id="contact">
-        <div class="head">
-            <h1>Contact <span>Us</span></h1>
-        </div>
-        <div class="contactUs">
-            <h3>Connect With Us</h3>
-            <input id="name" type="text" placeholder="Enter Your Name"> <br>
-            <input type="text" placeholder="Enter Mobile Number"> <br>
-            <button onclick="submit()">Submit</button>
-        </div>
-        
-    </div>
-    <div id="myn">
-        <br><br><br>
-        <img width="100%" src="https://assets.ajio.com/cms/AJIO/WEB/13062022-D-UHP-SK-Top-Banner.jpg" alt="home-pic">
+    <section class="section-sm">
+      <div class="container stats-grid reveal">
+        <div class="stat"><strong>01</strong><span>Zero-framework storefront</span></div>
+        <div class="stat"><strong>02</strong><span>Mobile-first responsive UX</span></div>
+        <div class="stat"><strong>03</strong><span>Complete demo checkout flow</span></div>
+        <div class="stat"><strong>04</strong><span>LocalStorage-powered state</span></div>
+      </div>
+    </section>
 
-    </div>
-    <div class="footer">
-        <div class="text">
-            <h2>About US</h2>
-            <p>Search2Get, India’s no. 1 online fashion destination <br> justifies its fashion relevance by bringing <br>something new and chic to the table on the daily. <br> Fashion trends seem to change <br> at lightning speed, yet  the Myntra shopping app <br> has managed to keep up without any hiccups.</p>
+    <section class="section" aria-labelledby="collections-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="section-kicker">Collections</span><h2 class="section-title" id="collections-title">Pick a lane.<br><span class="accent">Make it yours.</span></h2></div>
+          <p class="section-copy">A small, intentional catalog keeps the focus on interface quality: fast discovery, clear pricing and a shopping flow that feels complete.</p>
         </div>
-        <div class="text">
-            <a href="#"><h2>Product</h2>   </a>
-            <a href="#"><p>Our Design</p> </a>
-            <a href="#"><p>Theme</p>       </a> 
-            <a href="#"><p>Quality</p>    </a>
-            <a href="#"><p>Best Price</p>  </a>
+        <div class="category-grid">
+          <a class="category-card reveal" href="shop.html?category=Women">
+            <img src="g1.webp" alt="Women's fashion collection" loading="lazy">
+            <span class="category-arrow" aria-hidden="true">→</span>
+            <div class="category-content"><span>01 · Collection</span><strong>Women</strong><span>Soft structure · effortless layers</span></div>
+          </a>
+          <a class="category-card reveal" href="shop.html?category=Men">
+            <img src="M1.webp" alt="Men's fashion collection" loading="lazy">
+            <span class="category-arrow" aria-hidden="true">→</span>
+            <div class="category-content"><span>02 · Collection</span><strong>Men</strong><span>Relaxed cuts · clean essentials</span></div>
+          </a>
+          <a class="category-card reveal" href="journal.html">
+            <img src="trend2.webp" alt="Search2Get fashion journal" loading="lazy">
+            <span class="category-arrow" aria-hidden="true">→</span>
+            <div class="category-content"><span>03 · Editorial</span><strong>Journal</strong><span>Fits · ideas · project story</span></div>
+          </a>
         </div>
-        <div class="text">
-            <a href="#"><h2>Quality</h2></a>
-            <a href="#"><p>Focus</p></a>
-            <a href="#"><p>Customer</p></a>
-            <a href="#"><p>Review</p></a>
-            <a href="#"><p>Offer</p></a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="section-kicker">Trending now</span><h2 class="section-title" id="featured-title">The <span class="accent">front row.</span></h2></div>
+          <a class="btn btn-secondary" href="shop.html">View all styles →</a>
         </div>
-        <div class="text">
-            <h2>Address</h2>
-            <p>4th Floore Gate</p>
-            <p>Abar Bazar</p>
-            <p>Bangalore</p>    
+        <div class="product-grid" id="featuredGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="container editorial reveal">
+        <div class="editorial-grid">
+          <div class="editorial-copy">
+            <span class="section-kicker">The rebuild</span>
+            <h2 class="section-title">Same roots.<br>Much sharper instincts.</h2>
+            <p>This project began as a hand-typed first-year storefront. The new version deliberately stays in vanilla HTML, CSS and JavaScript—then pushes those fundamentals much further with responsive systems, reusable UI, state, accessibility and interaction design.</p>
+            <span class="editorial-note">No framework required.</span>
+          </div>
+          <div class="editorial-media"><img src="main.png" alt="Search2Get original project visual" loading="lazy"></div>
         </div>
-     <p>   &copy; All rights are reserved </p>
-    </div>
-    <script src="index.js"></script>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="section-kicker">Experience</span><h2 class="section-title" id="reviews-title">Feels good.<br><span class="accent">Works better.</span></h2></div>
+          <a class="btn btn-secondary" href="reviews.html">All reviews →</a>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal"><div class="stars">★★★★★</div><blockquote>“A dramatic upgrade without losing the charm of a handmade frontend project.”</blockquote><div class="review-person"><span class="avatar">A</span><div><strong>Aarav</strong><span>Demo shopper</span></div></div></article>
+          <article class="review-card reveal"><div class="stars">★★★★★</div><blockquote>“The catalog, quick view and cart finally behave like a real product instead of static pages.”</blockquote><div class="review-person"><span class="avatar">M</span><div><strong>Maya</strong><span>Demo shopper</span></div></div></article>
+          <article class="review-card reveal"><div class="stars">★★★★☆</div><blockquote>“Clean on desktop, genuinely usable on mobile, and the dark theme is a nice touch.”</blockquote><div class="review-person"><span class="avatar">K</span><div><strong>Kabir</strong><span>Demo shopper</span></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container newsletter reveal">
+        <div><h2>Drop alerts,<br>minus the spam.</h2><p>Try the newsletter interaction. Your email is stored only in your browser as part of this frontend demo.</p></div>
+        <form class="newsletter-form" id="newsletterForm"><label class="skip-link" for="newsletterEmail">Email address</label><input id="newsletterEmail" type="email" name="email" placeholder="you@example.com" autocomplete="email" required><button class="btn" type="submit">Join demo list</button></form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="index.js"></script>
 </body>
 </html>

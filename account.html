@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search2Get frontend-only local demo account experience.">
+  <title>Demo Account — Search2Get</title><link rel="icon" href="i1.png"><link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a><div id="site-header"></div>
+  <main id="main" class="login-page"><div class="login-wrap reveal">
+    <section class="login-art"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>Search2<em>Get</em></span></a><div><h2>A demo account that knows its limits.</h2><p>No fake backend, no fake security claims. This form demonstrates validation, password visibility and session state using localStorage only.</p></div><small>Portfolio frontend · local-only session</small></section>
+    <section class="login-card"><span class="section-kicker">Member demo</span><h1>Welcome back.</h1><p class="section-copy" style="margin-top:0">Use any valid email and a password with at least 4 characters.</p><form id="loginForm"><div class="field"><label for="loginEmail">Email</label><input id="loginEmail" type="email" autocomplete="email" required placeholder="you@example.com"></div><div class="field"><label for="loginPassword">Password</label><div class="password-wrap"><input id="loginPassword" type="password" autocomplete="current-password" minlength="4" required placeholder="••••••••"><button class="password-toggle" id="passwordToggle" type="button" aria-label="Show password">◉</button></div></div><button class="btn btn-primary" type="submit">Start local session</button></form><div class="demo-note">This is not authentication. Credentials never leave your browser and are not persisted; only the resulting demo profile name/email is stored locally.</div><div id="sessionHost" style="margin-top:16px"></div></section>
+  </div></main>
+  <div id="site-footer"></div><script src="index.js"></script>
+</body>
+</html>
